@@ -27,6 +27,7 @@ module.exports = {
                     url: interaction.targetMessage.url,
                 })
                 .setDescription(`"${interaction.targetMessage.content}"`)
+                .setThumbnail(interaction.targetMessage.attachments?.at(0).url)
                 .setTimestamp(interaction.targetMessage.createdTimestamp)
                 .setFooter({
                     text: `Quote Posted by: ${interaction.user.username}`,
